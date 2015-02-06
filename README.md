@@ -20,10 +20,12 @@ startActivity(intent);
 
 ```java
 String phoneNumber = "6505551234"; //Modify this, areacode & number, no spaces
-Uri uri = Uri.parse("smsto:" + phoneNumber"); 
-Intent it = new Intent(Intent.ACTION_SENDTO, uri); 
-it.putExtra("sms_body", "HELLO FROM MY APP : )"); 
-startActivity(it); 
+String smsMessage = "Hello from my app : )";
+
+Uri myUri = Uri.parse("smsto:" + phoneNumber); 
+Intent intent = new Intent(Intent.ACTION_SENDTO, myUri); 
+intent.putExtra("sms_body", smsMessage); 
+startActivity(intent); 
 ```
 
 ## Phone a friend
