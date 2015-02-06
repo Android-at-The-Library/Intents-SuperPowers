@@ -12,15 +12,14 @@ intent.putExtra(Intent.EXTRA_TEXT, "your-message");
 startActivity(Intent.createChooser(intent, ""));
 ```
 
-## Send a Txt Message:
+## Send Txt Message:
 
 ```java
-Uri smsUri = Uri.parse("tel:" + to);
-Intent intent = new Intent(Intent.ACTION_VIEW, smsUri);
-intent.putExtra("address", to);
-intent.putExtra("sms_body", message);
-intent.setType("vnd.android-dir/mms-sms");
-startActivity(intent);
+String phoneNumber = "6505551234"; //Modify this, areacode & number, no spaces
+Uri uri = Uri.parse("smsto:" + phoneNumber"); 
+Intent it = new Intent(Intent.ACTION_SENDTO, uri); 
+it.putExtra("sms_body", "HELLO FROM MY APP : )"); 
+startActivity(it); 
 ```
 
 ## Phone a friend
