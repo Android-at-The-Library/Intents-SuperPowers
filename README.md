@@ -9,7 +9,7 @@ Launch a website in the phone browser:
 
 ```java
 //place your website inside the quotes : D 
-String anyWebsite = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+String anyWebsite = "https://www.youtube.com/watch?v=QH2-TGUlwu4";
 
 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(anyWebsite));
 startActivity(intent);
