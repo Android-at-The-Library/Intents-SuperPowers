@@ -76,4 +76,18 @@ Intent intent = new Intent(Intent.ACTION_VIEW, intent.setData(Uri.parse("geo:" +
 startActivity(intent);
 ```
 
+## Open another page (activity) 
+ 
+Show any Latitude or Longitude in GoogleMaps App replace "37..." and "-122..." with your values,
+
+Steps
+
+0. right click on the "java" folder, and select New -> Activity -> Blank Activity (and set up as usual)
+1. Replace "ThisActivity" with your current activity's name
+2. Replace "NextActivity" with the next activity's name 
+
+```java
+Intent intent = new Intent(ThisActivity.this, NextPage.class );
+startActivity(intent);
+```
 
