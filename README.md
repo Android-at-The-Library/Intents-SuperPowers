@@ -16,7 +16,14 @@ startActivity(intent);
 ```
 
 
-## Send a Text Message
+## Prep an SMS Message
+
+1st place the following in the android_manifest.xml file (in the blank line beneath the "manifest" tag)
+```
+ <uses-permission android:name="android.permission.SEND_SMS" />
+```
+
+Then use the following intent as usual:
 
 ```java
 String phoneNumber = "6505551234"; //Modify this, areacode & number, no spaces
